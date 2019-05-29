@@ -1,0 +1,833 @@
+<html class="gr__dlfpromenade_com"><head><style type="text/css">
+/*pagination */
+div#pagination {
+     height:50px;
+     margin-top:3px;
+ }
+div#pagination .count {
+     float:left;
+     padding:5px;
+     }
+div#pagination .pages {
+     float:right; padding:5px;
+     }
+
+div#paginationTop .count { float:left; padding:5px;}
+div#paginationTop .pages { float:right; padding:5px;}
+
+div.pagination { padding:0px; margin:0px; }
+div.pagination a {
+     padding:3px 9px;
+     margin: 3px;
+     border: 1px solid #fff;
+     text-decoration: none;
+     color: #fff;
+     font-family:'robotolight';
+	 font-size: 16px;
+}
+div.pagination a:hover, div.pagination a:active {
+     border: 1px solid #752011;
+	 background:#752011;
+     color: #fff;
+}
+div.pagination span.current {
+     padding:5px 11px;
+     margin: 3px;
+     border: 1px solid #752011;
+     background-color: #752011;
+     color: #FFF;
+     font-family:'robotolight';
+	 font-size:15px;
+     }
+div.pagination span.disabled {
+     padding:3px 5px !important;
+     margin: 3px;
+     border: 1px solid #fff;
+     color: #fff !important;
+     font-family:'robotolight';
+	 font-size: 16px !important;
+	 background:none !important;
+}
+.bold14 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold
+}
+.rederror {
+	color: red;
+}
+</style>
+
+
+
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://www.tripadvisor.in/WidgetEmbed-socialButtonReviews?color=green&amp;size=rect&amp;locationId=4221141&amp;display_version=2&amp;uniq=448&amp;lang=en_IN" async=""></script><script src="https://www.tripadvisor.in/WidgetEmbed-certificateOfExcellence?year=2018&amp;locationId=4221141&amp;display_version=2&amp;uniq=279&amp;lang=en_IN" async=""></script><script src="https://www.tripadvisor.in/WidgetEmbed-cdsratingsonlynarrow?border=true&amp;backgroundColor=gray&amp;shadow=false&amp;locationId=4221141&amp;display_version=2&amp;uniq=191&amp;lang=en_IN" async=""></script><script src="https://www.tripadvisor.in/WidgetEmbed-linkingWidgetWAR?border=true&amp;locationId=4221141&amp;display_version=2&amp;uniq=188&amp;lang=en_IN" async=""></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-28228307-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-28228307-1');
+</script>
+
+
+
+    <title>Best Shopping Places in Delhi | Places to Visit in Delhi</title>
+    <meta name="description" content="DLF Promenade one of the most popular places to visit in Delhi, provides best shopping experience with the wide range of National and International fashion brands.">
+    <meta name="keywords" content="best shopping places in delhi, places to visit in delhi, dlf promenade, malls in delhi, shopping malls in delhi, best shopping malls in delhi, malls in south delhi, vasant kunj mall, biggest mall in delhi, best mall in delhi, places to visit in delhi for kids, places to celebrate birthday in delhi, birthday party venues in south delhi, best places to visit in delhi with friends, hangout places in delhi for couples, big chill vasant kunj, dominos vasant kunj, pvr cinemas vasant kunj, weekend getaways delhi, best restaurants in delhi, entertainment places in delhi, fine dining restaurants in delhi">
+    <meta charset="utf-8">
+    <meta http-equiv="content-language" content="english">
+    <link rel="canonical" href="http://dlfpromenade.com/storelisting.asp">
+    <meta name="author" content="http://www.dlfpromenade.com">
+    <meta name="page-topic" content="DLF Promenade - Best Shopping Places in Delhi">
+    <meta name="copyright" content="DLF Promenade">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="safe for kids">
+    <meta name="googlebot" content=" index, follow ">
+    <meta name="bingbot" content=" index, follow ">
+    <meta name="reply-to" content="dlfpromenade@dlf.in">
+    <meta name="allow-search" content="yes">
+    <meta name="revisit-after" content="daily">
+    <meta name="distribution" content="global">
+    <meta name="expires" content="never">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="getBrands.js"></script>
+    <script type="text/javascript">
+        function getcatid() {
+            var selected_value = $("#sDateDay").val();
+            document.getElementById('location').selectedIndex = 0;
+            if (selected_value == "0") {
+            }
+            else {
+                getBrand(selected_value);
+            }
+        }
+        function ByLocation(location) {
+            var selected_Locvalue = $("#location").val();
+            document.getElementById('sDateDay').selectedIndex = 0;
+            if (selected_Locvalue == "") {
+            }
+            else {
+                getBrandByLocation(selected_Locvalue);
+            }
+        }
+        function getBrandByAlphaBet1(chareters) {
+            getBrandByAlphaBet(chareters);
+        }
+		function getIdwisePage(catid,pahe){
+
+		var strURL="findPageWiseBrand.asp?catid="+catid+"&page="+pahe;
+		//alert("here.."+strURL);
+		var req = getXMLHTTP();
+		if (req) {
+			req.onreadystatechange = function() {
+				if (req.readyState == 4) {
+					// only if "OK"
+					if (req.status == 200) {
+						document.getElementById('catdiv').innerHTML=req.responseText;
+					} else {
+						alert("There was a problem while using selection");
+					}
+				}
+			}
+		    document.getElementById('catdiv').innerHTML = "<img src='images/loding.gif'>";
+			req.open("GET", strURL, true);
+			req.send(null);
+		}
+		}
+    </script>
+    <link rel="stylesheet" href="https://static.tacdn.com/css2/build/concat/t4b_widget_ratingsonly-v22146456683a.css"><script type="text/javascript" src="https://static.tacdn.com/js3/build/concat/widget/cdswidgets_m-c-v22480917520a.js"></script><link rel="stylesheet" href="https://static.tacdn.com/css2/build/concat/t4b_widget_linking_war-v21225551185a.css"><script type="text/javascript" src="https://static.tacdn.com/js3/build/concat/widget/cdswidgets_m-c-v22480917520a.js"></script><link rel="stylesheet" href="https://static.tacdn.com/css2/build/concat/t4b_widget_social-v2221177106a.css"><script type="text/javascript" src="https://static.tacdn.com/js3/build/concat/widget/cdswidgets_m-c-v22480917520a.js"></script><link rel="stylesheet" href="https://static.tacdn.com/css2/build/concat/t4b_widget_coe-v2666177268a.css"><script type="text/javascript" src="https://static.tacdn.com/js3/build/concat/widget/cdswidgets_min-c-v2395114504a.js"></script></head>
+
+<body onload="getBrandByAlphaBet('A')" data-gr-c-s-loaded="true" class="vsc-initialized" style="left: 0%;">
+
+<style type="text/css">
+/*pagination */
+div#pagination {
+     height:50px;
+     margin-top:3px;
+ }
+div#pagination .count {
+     float:left;
+     padding:5px;
+     }
+div#pagination .pages {
+     float:right; padding:5px;
+     }
+
+div#paginationTop .count { float:left; padding:5px;}
+div#paginationTop .pages { float:right; padding:5px;}
+
+div.pagination { padding:0px; margin:0px; }
+div.pagination a {
+     padding:3px 9px;
+     margin: 3px;
+     border: 1px solid #fff;
+     text-decoration: none;
+     color: #fff;
+     font-family:'robotolight';
+	 font-size: 16px;
+}
+div.pagination a:hover, div.pagination a:active {
+     border: 1px solid #752011;
+	 background:#752011;
+     color: #fff;
+}
+div.pagination span.current {
+     padding:5px 11px;
+     margin: 3px;
+     border: 1px solid #752011;
+     background-color: #752011;
+     color: #FFF;
+     font-family:'robotolight';
+	 font-size:15px;
+     }
+div.pagination span.disabled {
+     padding:3px 5px !important;
+     margin: 3px;
+     border: 1px solid #fff;
+     color: #fff !important;
+     font-family:'robotolight';
+	 font-size: 16px !important;
+	 background:none !important;
+}
+.bold14 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold
+}
+.rederror {
+	color: red;
+}
+</style>
+
+
+
+<div class="mobilehead">
+    <ul>
+        <li><a href="http://www.dlfpromenade.com/our-magazine.asp"><img src="http://www.dlfpromenade.com/images/magzine-icon1.png" alt="magzine icon"></a></li>
+        <li><a href="http://www.pvrcinemas.com/cinemasessions/Delhi-NCR/pvr-promenade-vasant-kunj-delhi/PNVK" rel="nofollow" target="_blank"><img src="http://www.dlfpromenade.com/images/pvr-icon-logo1.png" alt="pvr"></a></li>
+        <li><a href="http://www.dlfpromenade.com/store-locator.asp"><img src="http://www.dlfpromenade.com/images/search-icon1.png" alt="search icon"></a></li>
+    </ul>
+    <div class="menumob"><a href="javascript:;" class="btnmenu"><img src="http://www.dlfpromenade.com/images/menu-mob.png" alt="menu icon"></a></div>
+</div>
+<div class="headermain">
+    <div class="header">
+        <div class="topnav">
+            <ul>
+                <li> <a href="http://www.dlfpromenade.com/storelisting.asp" class="mainlink">Shop</a>
+                    <div class="menupopup">
+                        <div class="leftlinks">
+                            <ul>
+
+                                <li>
+
+                                    <a href="#tab1" class="activesubmenu">Apparels - Ethnic</a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="#tab2">Apparels - Fashion</a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="#tab3">Apparels -Sportswear</a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="#tab4">Beauty, Wellbeing, Skin Care, Pharmacy &amp; Spa</a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="#tab5">Books, Gifts &amp; Music</a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="#tab6">Electronics &amp; Gadgets</a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="#tab7">Eyewear</a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="#tab8">Footwear, Bags, Jewellery, Accessories &amp; Watches</a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="#tab9">Home &amp; Lifestyle</a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="#tab10">Kids &amp; Infant Care</a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="#tab11">Lingerie &amp; Nightwear</a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="#tab12">Specialty</a>
+
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="mlogos firstleftdiv" id="tab1" style="display:block;">
+                            <div class="scroll"> <div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=290&amp;catid=22"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/House-Of-Fett-Logo.jpg" alt="House Of Fett" title="House Of Fett"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=8&amp;catid=22"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/meenabazaar_logo.gif" alt="Meena Bazaar" title="Meena Bazaar"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=29&amp;catid=22"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/satya_paul_logo.gif" alt="Satya Paul" title="Satya Paul"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=291&amp;catid=22"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Ahuja-Sons-logo.png" alt="Ahuja Sons" title="Ahuja Sons"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=38&amp;catid=22"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/fab_india_logo.gif" alt="Fab India" title="Fab India"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=304&amp;catid=22"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Kalista-logo.jpg" alt="Kalista" title="Kalista"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=307&amp;catid=22"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Masaba.jpg" alt="Masaba" title="Masaba"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=149&amp;catid=22"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/nine-logo.gif" alt="Nine" title="Nine"></a></div> </div>
+                        </div>
+
+                        <div class="mlogos" id="tab2">
+                            <div class="scroll"> <div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=281&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/aldo-logo.jpg" alt="ALDO" title="ALDO"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=292&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/American-Eagle-logo.png" alt="American Eagle" title="American Eagle"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=198&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/logo_being-human.jpg" alt="Being Human" title="Being Human"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=200&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/BHPC-logo.jpg" alt="BHPC" title="BHPC"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=26&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/calvin_klein_logo.gif" alt="Calvin Klein Jeans" title="Calvin Klein Jeans"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=15&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/color_plus_logo.gif" alt="Color Plus" title="Color Plus"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=276&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/coverstory-logo.png" alt="Cover Story" title="Cover Story"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=191&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/forever-logo.jpg" alt="Forever 21" title="Forever 21"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=164&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/french-con-logo.jpg" alt="French Connection" title="French Connection"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=14&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/lacoste-logo.jpg" alt="Lacoste" title="Lacoste"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=6&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/marks-spencer-new-logo.jpg" alt="Marks &amp; Spencer" title="Marks &amp; Spencer"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=18&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/promod_logo.gif" alt="Promod" title="Promod"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=32&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/zara_logo.gif" alt="ZARA" title="ZARA"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=138&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Zodiac.gif" alt="Zodiac" title="Zodiac"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=25&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/celio_logo.gif" alt="Celio" title="Celio"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=172&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/chemistry-logo-store.jpg" alt="Chemistry" title="Chemistry"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=192&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/forever-logo.jpg" alt="Forever 21" title="Forever 21"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=42&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/forever_new_logo.gif" alt="Forever New" title="Forever New"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=297&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Kica-logo.png" alt="KICA" title="KICA"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=39&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/levis_logo.gif" alt="Levi" s'="" title="Levi"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=48&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/louis_philippe_logo.gif" alt="Louis Philippe" title="Louis Philippe"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=109&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/raymond-measure.gif" alt="Raymond Made to Measure" title="Raymond Made to Measure"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=54&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/ritu_kumar_logo.jpg" alt="Ritu Kumar" title="Ritu Kumar"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=36&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/tommy_logo.gif" alt="Tommy Hilfiger" title="Tommy Hilfiger"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=184&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/united_color_logo.gif" alt="United Colour of Benetton" title="United Colour of Benetton"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=47&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/vanheu_logo.gif" alt="Van Heusen" title="Van Heusen"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=33&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/zara_logo.gif" alt="ZARA" title="ZARA"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=159&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Bloom.gif" alt="Bloom" title="Bloom"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=285&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/armani-exchange-logo-pic.gif" alt="Armani Exchange" title="Armani Exchange"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=311&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/chique-logo.jpg" alt="Chique" title="Chique"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=249&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/g--star-raw-logo.jpg" alt="G-STAR RAW" title="G-STAR RAW"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=283&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/minizmo-logo.gif" alt="Minizmo" title="Minizmo"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=287&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/simon-carter-logo-pic.gif" alt="Simon Carter" title="Simon Carter"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=269&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/us-polo-assn.jpg" alt="U.S. Polo" title="U.S. Polo"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=166&amp;catid=6"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/wills-logo.jpg" alt="Wills Lifestyle" title="Wills Lifestyle"></a></div> </div>
+                        </div>
+
+                        <div class="mlogos" id="tab3">
+                            <div class="scroll"> <div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=21&amp;catid=19"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/adida_logo.gif" alt="Adidas" title="Adidas"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=293&amp;catid=19"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Adidas-Original-logo.png" alt="Adidas Original" title="Adidas Original"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=301&amp;catid=19"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Superdry-Sport-logo.jpg" alt="Superdry Sports" title="Superdry Sports"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=35&amp;catid=19"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/nike_logo.gif" alt="Nike" title="Nike"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=23&amp;catid=19"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/puma_log.gif" alt="Puma" title="Puma"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=309&amp;catid=19"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Under-Armour.jpg" alt="Under Armour" title="Under Armour"></a></div> </div>
+                        </div>
+
+                        <div class="mlogos" id="tab4">
+                            <div class="scroll"> <div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=300&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/bath-body-works-logo.jpg" alt="Bath and Body Works" title="Bath and Body Works"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=235&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Chanel-logo.jpg" alt="Chanel" title="Chanel"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=226&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/colorbar-logo.jpg" alt="Color Bar" title="Color Bar"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=80&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/forest_logo.gif" alt="Forest Essential" title="Forest Essential"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=81&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/inglot-logo.gif" alt="Inglot" title="Inglot"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=296&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Jo-Malone-logo.png" alt="Jo Malone" title="Jo Malone"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=239&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Kama-Ayurveda-logo.jpg" alt="Kama Ayurveda" title="Kama Ayurveda"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=78&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/l-occitane-logo.gif" alt="L" occitane="" provence'="" title="L"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=79&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/parcos_logo.gif" alt="Parcos" title="Parcos"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=193&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Sephora-logo.jpg" alt="Sephora" title="Sephora"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=76&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/mac-logo.jpg" alt="MAC" title="MAC"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=114&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Nail_Spa.gif" alt="Nail Spa" title="Nail Spa"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=82&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/aroma_logo.gif" alt="Aroma Thai" title="Aroma Thai"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=148&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Guardian-Pharmacy-logo.gif" alt="Guardian Pharmacy" title="Guardian Pharmacy"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=140&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/looks-unisex.jpg" alt="Looks Salon" title="Looks Salon"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=83&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/newu_logo.gif" alt="New U" title="New U"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=286&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/dyson-logo-pic.gif" alt="Dyson" title="Dyson"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=273&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/kiko-milano-logo.jpg" alt="Kiko Milano" title="Kiko Milano"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=288&amp;catid=10"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/smashbox-logo-pic.gif" alt="Smashbox" title="Smashbox"></a></div> </div>
+                        </div>
+
+                        <div class="mlogos" id="tab5">
+                            <div class="scroll"> <div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=87&amp;catid=9"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/archies-logo.png" alt="Archies" title="Archies"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=179&amp;catid=9"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/kriti-logohomr-logo.jpg" alt="Kriti Creations" title="Kriti Creations"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=89&amp;catid=9"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/ombook_logo.gif" alt="Om Book Shop" title="Om Book Shop"></a></div> </div>
+                        </div>
+
+                        <div class="mlogos" id="tab6">
+                            <div class="scroll"> <div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=77&amp;catid=15"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/gizmos_logo.gif" alt="Gizmos" title="Gizmos"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=137&amp;catid=15"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/iworld.gif" alt="I World" title="I World"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=74&amp;catid=15"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/samsung-logo.jpg" alt="Samsung Cafe" title="Samsung Cafe"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=75&amp;catid=15"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/new-planet-logo.gif" alt="New Planet" title="New Planet"></a></div> </div>
+                        </div>
+
+                        <div class="mlogos" id="tab7">
+                            <div class="scroll"> <div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=68&amp;catid=5"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/dayal_optical.gif" alt="Dayal Opticals" title="Dayal Opticals"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=11&amp;catid=5"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/sunglass_logo.gif" alt="Sunglass Hut" title="Sunglass Hut"></a></div> </div>
+                        </div>
+
+                        <div class="mlogos" id="tab8">
+                            <div class="scroll"> <div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=238&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Call-It-Spring-logo.jpg" alt="Call It Spring" title="Call It Spring"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=66&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/charles&amp;keith_logo.gif" alt="Charles &amp; Keith" title="Charles &amp; Keith"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=202&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/loho-fossil.gif" alt="Fossil" title="Fossil"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=156&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/hushlogo.jpg" alt="Hush Puppies" title="Hush Puppies"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=294&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/love-moschino-logo.jpg" alt="Love Moschino" title="Love Moschino"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=298&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Pandora-logo.png" alt="Pandora" title="Pandora"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=100&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Steve-Madden.gif" alt="Steve Madden" title="Steve Madden"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=199&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/aldo-accessories-logo.jpg" alt="ALDO ACC" title="ALDO ACC"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=110&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Clarks.gif" alt="Clarks" title="Clarks"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=251&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/da-milano-logo.jpg" alt="Da Milano" title="Da Milano"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=234&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/DC-with-Defy-Convention.jpg" alt="DC Shoes" title="DC Shoes"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=275&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/joe-shu-logo.png" alt="JOE SHU" title="JOE SHU"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=295&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/skechers-logo.png" alt="Skechers" title="Skechers"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=306&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Tanishq.jpg" alt="Tanishq" title="Tanishq"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=44&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/woods_logo.gif" alt="Woods" title="Woods"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=280&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/aarohi-logo.jpg" alt="Aarohi" title="Aarohi"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=289&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/JewellKart-logo.jpg" alt="JewellKart" title="JewellKart"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=246&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/kapporsons-watch-logo.jpg" alt="Kapoor Watch &amp; Co." title="Kapoor Watch &amp; Co."></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=270&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/kipling-logo.jpg" alt="Kipling" title="Kipling"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=284&amp;catid=8"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/melissa-logo-pic.gif" alt="Melissa" title="Melissa"></a></div> </div>
+                        </div>
+
+                        <div class="mlogos" id="tab9">
+                            <div class="scroll"> <div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=194&amp;catid=11"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/pure-logo_1.jpg" alt="Pure Home and Living" title="Pure Home and Living"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=73&amp;catid=11"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/fragrance_people_logo.gif" alt="The Fragrance People" title="The Fragrance People"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=245&amp;catid=11"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/desi-pop-logo.jpg" alt="Desi Pop" title="Desi Pop"></a></div> </div>
+                        </div>
+
+                        <div class="mlogos" id="tab10">
+                            <div class="scroll"> <div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=58&amp;catid=13"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/mother_care_logo.gif" alt="Mothercare" title="Mothercare"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=195&amp;catid=13"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/tommy-hilfgr-kids-new-logo.jpg" alt="Tommy Hilfiger Kids" title="Tommy Hilfiger Kids"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=37&amp;catid=13"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/united_color_logo.gif" alt="UCB Kids" title="UCB Kids"></a></div> </div>
+                        </div>
+
+                        <div class="mlogos" id="tab11">
+                            <div class="scroll"> <div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=217&amp;catid=14"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/ckunderlogo.jpg" alt="Calvin Klein Underwear" title="Calvin Klein Underwear"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=7&amp;catid=14"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/marks-spencer-new-logo.jpg" alt="Marks &amp; Spencer" title="Marks &amp; Spencer"></a></div><div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=233&amp;catid=14"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Hunkemoller.gif" alt="Hunkemoller" title="Hunkemoller"></a></div> </div>
+                        </div>
+
+                        <div class="mlogos" id="tab12">
+                            <div class="scroll"> <div class="mlogodiv"><a href="http://www.dlfpromenade.com/storedetails.asp?id=178&amp;catid=25"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/foodhall-logo.jpg" alt="Foodhall" title="Foodhall"></a></div> </div>
+                        </div>
+
+                    </div>
+                </li>
+                <li><a href="http://www.dlfpromenade.com/dine.asp">Dine</a>
+                    <div class="menupopupdine">
+                        <div class="leftlinksdine">
+                            <ul>
+                                <li><a href="#tabdine1" class="activesubmenu">Casual / Fine Dining</a></li><li><a href="#tabdine2">Eataries &amp; Cafes</a></li><li><a href="#tabdine3">Eat Food Lounge (Food Court)</a></li>
+                            </ul>
+                        </div>
+                        <div class="mlogosdine firstleftdiv" id="tabdine1" style="display:block;"> <div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=99&amp;catid=7"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Chokola.jpg" alt="Chokola" title="Chokola"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=241&amp;catid=7"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Auntie-Annes-logo.jpg" alt="Cinnabon &amp; Auntie Annes" title="Cinnabon &amp; Auntie Annes"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=107&amp;catid=7"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/costa_logo.gif" alt="Costa Coffee" title="Costa Coffee"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=228&amp;catid=7"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/krispy-logo.gif" alt="Krispy Kreme" title="Krispy Kreme"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=240&amp;catid=7"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/chaayos-logo-new.jpg" alt="Chaayos" title="Chaayos"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=162&amp;catid=7"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/l-opera.gif" alt="L" opera'="" title="L"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=168&amp;catid=7"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/mod-logo.gif" alt="Mad Over Donuts" title="Mad Over Donuts"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=176&amp;catid=7"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Gelato-vinto-logo.jpg" alt="Gelato Vinto" title="Gelato Vinto"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=206&amp;catid=7"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/starbucks-new-logo.jpg" alt="Starbucks" title="Starbucks"></a></div> </div>
+                        <div class="mlogosdine" id="tabdine2"> <div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=97&amp;catid=23"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/keya-new-logo.jpg" alt="Keya Kainoosh" title="Keya Kainoosh"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=103&amp;catid=23"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/mocha-logo.jpg" alt="Mocha Art House" title="Mocha Art House"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=98&amp;catid=23"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/smoke-house-logo.jpg" alt="Smoke House Deli" title="Smoke House Deli"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=278&amp;catid=23"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/4700-bc-logo.png" alt="4700 BC" title="4700 BC"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=190&amp;catid=23"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/delhi-heights-logo.jpg" alt="Cafe Delhi Heights" title="Cafe Delhi Heights"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=302&amp;catid=23"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Le-Cantine.jpg" alt="Le Cantine" title="Le Cantine"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=167&amp;catid=23"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/mamagoto-logo.jpg" alt="Mamagoto" title="Mamagoto"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=174&amp;catid=23"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/nando-logo.jpg" alt="Nando" s'="" title="Nando"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=117&amp;catid=23"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/tgi-friday-logo-new-7916.jpg" alt="T.G.I. Friday" s'="" title="T.G.I. Friday"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=212&amp;catid=23"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/logo-beer-cafe.jpg" alt="The Beer cafe" title="The Beer cafe"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=188&amp;catid=23"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/the-big-chill-cafe-new-logo.jpg" alt="The Big Chill" title="The Big Chill"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=305&amp;catid=23"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Yum-Yum-Cha-logo.jpg" alt="Yum Yum Cha" title="Yum Yum Cha"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=272&amp;catid=23"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/nm-logo.jpg" alt="Namak Mandi" title="Namak Mandi"></a></div> </div>
+                        <div class="mlogosdine" id="tabdine3"> <div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=242&amp;catid=24"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Tibbs-Frankie-logo.jpg" alt="Tibbs Frankie" title="Tibbs Frankie"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=160&amp;catid=24"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/eat-food.jpg" alt="DLF Food Court" title="DLF Food Court"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=261&amp;catid=24"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/dominos-logo.png" alt="Domino" s="" pizza'="" title="Domino"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=264&amp;catid=24"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/haldiram-logo.png" alt="Haldiram" title="Haldiram"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=263&amp;catid=24"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Keventers-logo.jpg" alt="Keventers" title="Keventers"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=256&amp;catid=24"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/king-kulfi-logo.jpg" alt="King Kulfi" title="King Kulfi"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=262&amp;catid=24"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/mcdonalds-logo.jpg" alt="Mc Donald" s'="" title="Mc Donald"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=310&amp;catid=24"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/millies-cookies.jpg" alt="Millies Cookies" title="Millies Cookies"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=267&amp;catid=24"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/ooh-la-la-logo.png" alt="Ooh La La" title="Ooh La La"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=268&amp;catid=24"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/shreerathnam-logo.jpg" alt="Shree Rathnam" title="Shree Rathnam"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=260&amp;catid=24"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/tikka-town-logo.png" alt="Tikka Town" title="Tikka Town"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=266&amp;catid=24"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/wanchai-by-kylin-logo.jpg" alt="Wanchai By Kylin" title="Wanchai By Kylin"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=271&amp;catid=24"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/biryani-blues-logo.jpg" alt="Biryani Blues" title="Biryani Blues"></a></div><div class="mlogodivdine"><a href="http://www.dlfpromenade.com/dinedetails.asp?id=308&amp;catid=24"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/Go-Gourmet-logo.jpg" alt="Go Gourmet" title="Go Gourmet"></a></div> </div>
+                    </div>
+                </li>
+                <li><a href="http://www.dlfpromenade.com/entertain.asp">Entertain</a>
+                    <div class="menupopupenter">
+                        <div class="mlogosenter">
+
+                            <div class="mlogodiventer">
+
+                                <a href="http://www.dlfpromenade.com/entertaindetails.asp?id=223&amp;catid=4"><img style="width:100%" src="http://www.dlfpromenade.com/images/stores/pvricon-logo.jpg" alt="PVR Icon" title=""></a>
+
+                            </div>
+                            <div class="mlogodiventer"> <a href="http://www.dlfpromenade.com/kids.asp"><img style="width:100%" src="http://www.dlfpromenade.com/images/kiddylogo.jpg" alt="kiddyland" title="kiddyland"></a> </div>
+
+                        </div>
+                    </div>
+                </li>
+                <li><a href="http://www.dlfpromenade.com/visit.asp">Visit</a></li>
+                <li><a href="http://www.dlfpromenade.com/safety.asp">Safety</a></li>
+                <li><a href="http://blog.dlfpromenade.com/">Blog</a></li>
+            </ul>
+            <div class="social">
+                <ul>
+                    <li><a href="https://www.facebook.com/dlfpromenade?fref=ts" rel="nofollow" target="_blank" class="facebook">&nbsp;</a></li>
+                    <li><a href="https://twitter.com/PromenadeDLF" rel="nofollow" target="_blank" class="twitter">&nbsp;</a></li>
+                    <li><a href="https://in.pinterest.com/dlfpromenade/" rel="nofollow" target="_blank" class="pinit">&nbsp;</a></li>
+                    <li><a href="https://instagram.com/dlfpromenade/" rel="nofollow" target="_blank" class="instagram">&nbsp;</a></li>
+                    <!--<li><a href="javascript:;" target="_blank" class="google">&nbsp;</a></li>-->
+                </ul>
+            </div>
+        </div>
+        <div class="logomain">
+            <div class="logo"><a href="http://www.dlfpromenade.com/index.asp"><img src="http://www.dlfpromenade.com/images/logo.png" alt="DLF Promenade"></a></div>
+            <div class="clear"></div>
+            <ul>
+                <li><a href="http://www.dlfpromenade.com/the-hub.asp">The Hub</a></li>
+                <li><a href="http://www.dlfpromenade.com/events.asp">Offers &amp; Events</a></li>
+                <!--<li><a href="kids.asp">Kids</a></li>-->
+                <li><a href="http://www.dlfpromenade.com/perks.asp">Promenade Perks</a></li>
+                <li><a href="http://www.dlfpromenade.com/gallery.asp">Gallery</a></li>
+                <li><a href="https://goo.gl/maps/cvUNMgfSLHQ2" target="_blank">Virtual Tours</a></li>
+                <li><a href="http://www.dlfpromenade.com/media-centre.asp">Media Center</a></li>
+                <li><a href="http://www.dlfpromenade.com/guest-services.asp">Guest Services</a></li>
+                <li><a href="http://www.dlfpromenade.com/fire-evacuation-plan.asp">Fire Evacuation Plan</a></li>
+            </ul>
+        </div>
+        <!--<div style="float:left; width:100%; z-index: -1; position: absolute;"><a href="summer-fiesta/index.html" target="_blank" style="display: block; min-height:700px"></a></div>-->
+        <!--<div class="promoright">
+                <img src="images/promo.png" alt="" />
+            </div>-->
+        <div class="clear"></div>
+        <div class="bottomlink"><a href="http://www.dlfpromenade.com/our-magazine.asp">
+            <div class="btmicons"></div>
+            <div class="clear"></div>
+            Our<br>
+            Magazine</a></div>
+        <div class="bottomlink1"><a href="http://www.dlfpromenade.com/pvr-cinema.asp">
+            <div class="btmicons"></div>
+            <div class="clear"></div>
+            PVR<br>
+            Cinemas</a></div>
+        <div class="bottomlink2"><a href="http://www.dlfpromenade.com/store-locator.asp">
+            <div class="btmicons"></div>
+            <div class="clear"></div>
+            Store Locator</a></div>
+        <div class="whiteround">
+            <div class="roundlinks">
+                <ul>
+                    <li><a href="http://www.dlfpromenade.com/video.asp">Video &nbsp;<img src="http://www.dlfpromenade.com/images/video-icon.png" alt="video icon" align="absmiddle"></a></li>
+                    <li><a href="http://www.dlfpromenade.com/opening-hours.asp">Opening Hours &nbsp;<img src="http://www.dlfpromenade.com/images/opening-hrs.png" alt="opening hours" align="absmiddle"></a></li>
+                    <li><a href="http://www.dlfpromenade.com/subscribe-newsletter.asp">Subscribe to Newsletter &nbsp;<img src="http://www.dlfpromenade.com/images/news-letter.png" alt="newsletter" align="absmiddle"></a></li>
+                    <li><a href="http://www.dlfpromenade.com/feedback-suggestions.asp">Feedback &amp; Suggestions &nbsp;<img src="http://www.dlfpromenade.com/images/feedback.png" alt="feedback" align="absmiddle"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="linksdivmob">
+            <ul>
+                <li><a href="http://www.dlfpromenade.com/video.asp"><img src="http://www.dlfpromenade.com/images/video-icon.png" alt="video icon" align="absmiddle"></a></li>
+                <li><a href="http://www.dlfpromenade.com/opening-hours.asp"><img src="http://www.dlfpromenade.com/images/opening-hrs.png" alt="opening hours" align="absmiddle"></a></li>
+                <li><a href="http://www.dlfpromenade.com/subscribe-newsletter.asp"><img src="http://www.dlfpromenade.com/images/news-letter.png" alt="newsletter" align="absmiddle"></a></li>
+                <li style="border:none;"><a href="http://www.dlfpromenade.com/feedback-suggestions.asp"><img src="http://www.dlfpromenade.com/images/feedback.png" alt="feedback" align="absmiddle"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="mobileright" style="right: -70%;"></div>
+<div id="mobilemenu" style="position: fixed;">
+    <div class="mobilemenuclose"><img src="http://www.dlfpromenade.com/images/close.png" alt="close butten" border="" style="margin-right:10px;"></div>
+    <div class="mobilemenucontent">
+        <ul id="browser" class="treeview">
+            <li><a href="http://www.dlfpromenade.com/storelisting.asp"><span>Shop</span></a></li>
+            <li><a href="http://www.dlfpromenade.com/dine.asp"><span>Dine</span></a></li>
+            <li><a href="http://www.dlfpromenade.com/entertain.asp"><span>Entertain</span></a></li>
+            <li><a href="http://www.dlfpromenade.com/visit.asp"><span>Visit</span></a></li>
+            <li><a href="http://blog.dlfpromenade.com/"><span>Blog</span></a></li>
+            <li><a href="http://www.dlfpromenade.com/safety.asp"><span>Safety</span></a></li>
+            <li><a href="http://www.dlfpromenade.com/the-hub.asp"><span>The Hub</span></a></li>
+            <li><a href="http://www.dlfpromenade.com/events.asp"><span>Events</span></a></li>
+            <!--<li><a href="kids.asp"><span>Kids</span></a></li>-->
+            <li><a href="http://www.dlfpromenade.com/perks.asp"><span>Promenade Perks</span></a></li>
+            <li><a href="http://www.dlfpromenade.com/gallery.asp"><span>Gallery</span></a></li>
+            <li><a href="javascript:;" target="_blank"><span>Virtual Tours</span></a></li>
+            <li><a href="http://www.dlfpromenade.com/media-centre.asp"><span>Media Center</span></a></li>
+            <li><a href="http://www.dlfpromenade.com/guest-services.asp"><span>Guest Services</span></a></li>
+            <li class="last"><a href="http://www.dlfpromenade.com/fire-evacuation-plan.asp"><span>Fire Evacuation Plan</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="homebanner innerbanner"><ul id="supersized" class="quality" style="visibility: visible;"><li class="slide-0 prevslide" data-cap="caption-0"><a target="_blank"><img src="images/melvin-louis-dance-workshop.jpg" style="width: 1812.2px; left: -230.5px; top: 0px; height: 743px;"></a></li><li class="slide-1 activeslide" data-cap="caption-1" style="visibility: visible; opacity: 1;"><a target="_blank"><img src="images/may-banner.jpg" style="width: 1812.2px; left: -230.5px; top: 0px; height: 743px;"></a></li><li class="slide-2" data-cap="caption-2" style="visibility: hidden;"><a target="_blank"><img src="images/fun-finds.jpg" style="height: 743px; width: 1812.2px; left: -230.5px; top: 0px;"></a></li><li class="slide-3" data-cap="caption-3"></li><li class="slide-4" data-cap="caption-4"></li><li class="slide-5" data-cap="caption-5"></li><li class="slide-6" data-cap="caption-6"><a target="_blank"><img src="images/wifi-banner.jpg" style="height: 743px; width: 1812.2px; left: -230.5px; top: 0px;"></a></li></ul></div>
+<div class="innermain">
+    <div class="innermid">
+        <div class="main">
+            <div class="bredcrum"><a href="index.asp">Home</a>  &nbsp;-&nbsp;  Shop  &nbsp;-&nbsp;  Store Directory</div>
+            <div class="sortright">
+                <div class="selectyear">
+                    <select name="sDateDay" id="sDateDay" onchange="getcatid('sDateDay');" class="select">
+                        <option selected="selected" value="0">Choose Category</option>
+
+                        <option value="10" selected="selected">Beauty, Wellbeing, Skin Care, Pharmacy &amp; Spa</option>
+
+                        <option value="23">Casual / Fine Dining</option>
+
+                        <option value="19">Apparels -Sportswear</option>
+
+                        <option value="22">Apparels - Ethnic</option>
+
+                        <option value="9">Books, Gifts &amp; Music</option>
+
+                        <option value="7">Eataries &amp; Cafes</option>
+
+                        <option value="5">Eyewear</option>
+
+                        <option value="15">Electronics &amp; Gadgets</option>
+
+                        <option value="6">Apparels - Fashion</option>
+
+                        <option value="8">Footwear, Bags, Jewellery, Accessories &amp; Watches</option>
+
+                        <option value="11">Home &amp; Lifestyle</option>
+
+                        <option value="13">Kids &amp; Infant Care</option>
+
+                        <option value="14">Lingerie &amp; Nightwear</option>
+
+                        <option value="4">Services &amp; Entertainment</option>
+
+                        <option value="25">Specialty</option>
+
+                        <option value="24">Eat Food Lounge (Food Court)</option>
+
+                        <option value="26">Casual Fine Dining</option>
+
+                    </select>
+                    <div class="holder"></div>
+                </div>
+                <div class="selectyear">
+                    <select name="location" id="location" onchange="ByLocation('location');" class="select">
+                        <option value="">Choose Floor</option>
+                        <option value="Ground Floor">Ground Floor</option>
+                        <option value="First Floor">First Floor</option>
+                        <option value="Second Floor">Second Floor</option>
+                    </select>
+                    <div class="holder"></div>
+                </div>
+            </div>
+            <h1>Store Directory</h1>
+            <ul class="alpha">
+                <li><a href="JavaScript:getBrandByAlphaBet1('A')" class="firsrli">A</a></li><li><a href="JavaScript:getBrandByAlphaBet1('B')">B</a></li><li><a href="JavaScript:getBrandByAlphaBet1('C')">C</a></li><li><a href="JavaScript:getBrandByAlphaBet1('D')">D</a></li><li><a href="JavaScript:getBrandByAlphaBet1('E')" style="pointer-events: none;">E</a></li><li><a href="JavaScript:getBrandByAlphaBet1('F')">F</a></li><li><a href="JavaScript:getBrandByAlphaBet1('G')">G</a></li><li><a href="JavaScript:getBrandByAlphaBet1('H')">H</a></li><li><a href="JavaScript:getBrandByAlphaBet1('I')">I</a></li><li><a href="JavaScript:getBrandByAlphaBet1('J')">J</a></li><li><a href="JavaScript:getBrandByAlphaBet1('K')">K</a></li><li><a href="JavaScript:getBrandByAlphaBet1('L')">L</a></li><li><a href="JavaScript:getBrandByAlphaBet1('M')">M</a></li><li><a href="JavaScript:getBrandByAlphaBet1('N')">N</a></li><li><a href="JavaScript:getBrandByAlphaBet1('O')">O</a></li><li><a href="JavaScript:getBrandByAlphaBet1('P')">P</a></li><li><a href="JavaScript:getBrandByAlphaBet1('Q')" style="pointer-events: none;">Q</a></li><li><a href="JavaScript:getBrandByAlphaBet1('R')">R</a></li><li><a href="JavaScript:getBrandByAlphaBet1('S')">S</a></li><li><a href="JavaScript:getBrandByAlphaBet1('T')">T</a></li><li><a href="JavaScript:getBrandByAlphaBet1('U')">U</a></li><li><a href="JavaScript:getBrandByAlphaBet1('V')">V</a></li><li><a href="JavaScript:getBrandByAlphaBet1('W')">W</a></li><li><a href="JavaScript:getBrandByAlphaBet1('X')" style="pointer-events: none;">X</a></li><li><a href="JavaScript:getBrandByAlphaBet1('Y')">Y</a></li><li><a href="JavaScript:getBrandByAlphaBet1('Z')" class="lastli">Z</a></li>
+            </ul>
+
+            <div id="catdiv"><style type="text/css">
+/*pagination */
+div#pagination {
+     height:50px;
+     margin-top:3px;
+ }
+div#pagination .count {
+     float:left;
+     padding:5px;
+     }
+div#pagination .pages {
+     float:right; padding:5px;
+     }
+
+div#paginationTop .count { float:left; padding:5px;}
+div#paginationTop .pages { float:right; padding:5px;}
+
+div.pagination { padding:0px; margin:0px; }
+div.pagination a {
+     padding:3px 9px;
+     margin: 3px;
+     border: 1px solid #fff;
+     text-decoration: none;
+     color: #fff;
+     font-family:'robotolight';
+	 font-size: 16px;
+}
+div.pagination a:hover, div.pagination a:active {
+     border: 1px solid #752011;
+	 background:#752011;
+     color: #fff;
+}
+div.pagination span.current {
+     padding:5px 11px;
+     margin: 3px;
+     border: 1px solid #752011;
+     background-color: #752011;
+     color: #FFF;
+     font-family:'robotolight';
+	 font-size:15px;
+     }
+div.pagination span.disabled {
+     padding:3px 5px !important;
+     margin: 3px;
+     border: 1px solid #fff;
+     color: #fff !important;
+     font-family:'robotolight';
+	 font-size: 16px !important;
+	 background:none !important;
+}
+.bold14 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold
+}
+.rederror {
+	color: red;
+}
+</style>
+
+
+                <h2>Eyewear</h2>
+                <div class="storelogos" style="float:left;">
+
+
+                    <div class="logodivs">
+                        <div class="storelg"><a href="storedetails.asp?id=68&amp;catid=5"><img src="images/stores/dayal_optical.gif" alt=""></a></div>
+                        <div class="logodetails">
+                            <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                <tr>
+                                    <td valign="middle">
+
+                                        <a href="storedetails.asp?id=68&amp;catid=5">
+                                            <h1>Dayal Opticals</h1>
+                                            <p>234  |  First Floor<br>
+                                                011-46178800, +919891949927
+                                            </p></a>
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <div class="logodivs" style="margin-right:0px;">
+                        <div class="storelg"><a href="storedetails.asp?id=11&amp;catid=5"><img src="images/stores/sunglass_logo.gif" alt=""></a></div>
+                        <div class="logodetails">
+                            <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                <tr>
+                                    <td valign="middle">
+
+                                        <a href="storedetails.asp?id=11&amp;catid=5">
+                                            <h1>Sunglass Hut</h1>
+                                            <p>114  |  Ground Floor<br>
+                                                011-46075614, +919654456472
+                                            </p></a>
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="pagination" style="clear:both;"></div>
+                </div>
+
+
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="innerbtm"></div>
+    <div class="clear"></div>
+</div>
+
+<div class="footer">
+    <div class="footermain">
+        <ul>
+            <li><a href="http://www.dlfpromenade.com/about.asp" style="padding-left:0px;">About Us</a></li>
+            <li><a href="http://www.dlfpromenade.com/contact-us.asp">Contact Us</a></li>
+            <!--<li><a href="http://www.dlf.in/career.aspx" rel="nofollow" target="_blank">Careers</a></li>-->
+            <!--<li><a href="http://www.dlfpromenade.com/leasing-enquiries.asp">Leasing Enquiries</a></li>
+                  <li><a href="http://www.dlfpromenade.com/comments-views.asp">Comments / Views</a></li>-->
+            <li><a href="http://www.dlfpromenade.com/investor.asp">Investor</a></li>
+            <li><a href="https://goo.gl/maps/cvUNMgfSLHQ2" target="_blank">Virtual Tour</a></li>
+            <li><a href="http://www.dlfpromenade.com/privacy-policy.asp">Privacy Policy</a></li>
+            <li><a href="http://www.dlfpromenade.com/terms-conditions.asp" style="padding-right:0px;">Terms &amp; Conditions</a></li>
+        </ul>
+        <div class="address">
+            <div class="admid">
+                <h1>LOCATION</h1>
+                <p>3 Nelson Mandela Road, Vasant Kunj Malls
+                    New Delhi - 110070</p>
+                <p>+91 11 46104466</p>
+                <p>dlfpromenade@dlf.in</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="copy"> <img src="http://www.dlfpromenade.com/images/logofooter.png" alt="DLF Promenade">
+            <p>© Copyright 2015 <strong>DLF Promenade, Vasant Kunj</strong><br>
+                Site by: Cross Section</p>
+            <div class="clear"></div>
+        </div>
+
+        <div class="tripadvsr">
+            <div class="tripadvisor1">
+                <div id="TA_linkingWidgetWAR188" class="TA_linkingWidgetWAR"><img src="https://p.travelsmarter.net/api/usersync/seed.gif?api_key=gqLWKHSnTxes4YmmtgWkqA&amp;loc_id=4221141&amp;publisher_browser_id=214c7b81faf231f08ce989ed5a51dd0acd21204a&amp;cb=1559146484536&amp;part=true" alt="" width="0" height="0"><img src="https://p.travelsmarter.net/api/usersync/end.gif?api_key=gqLWKHSnTxes4YmmtgWkqA&amp;loc_id=4221141&amp;publisher_browser_id=214c7b81faf231f08ce989ed5a51dd0acd21204a&amp;cb=1559146484536&amp;term=1" alt="" width="0" height="0"><img src="https://p.travelsmarter.net/api/usersync/end.gif?api_key=gqLWKHSnTxes4YmmtgWkqA&amp;loc_id=4221141&amp;publisher_browser_id=214c7b81faf231f08ce989ed5a51dd0acd21204a&amp;cb=1559146484536&amp;term=2" alt="" width="0" height="0"> <div id="CDSWIDLNKR" class="border"> <div class="widLNKRInner widLNKWrite"> <ul> <li id="talink" class="widLNKSml"><a href="https://www.tripadvisor.in/UserReview-g304551-d4221141-DLF_Promenade_Mall-New_Delhi_National_Capital_Territory_of_Delhi.html" onclick="ta.cds.handleTALink(15078,this);return true;" target="_blank" rel="nofollow">Write a review of DLF Promenade Mall</a></li> <li> <a target="_blank" href="https://www.tripadvisor.in/" rel="nofollow"><img src="https://www.tripadvisor.in/img/cdsi/partner/tripadvisor_logo_115x18-15078-2.gif" alt="TripAdvisor"></a> </li> </ul> </div> </div> </div>
+                <script src="http://www.jscache.com/wejs?wtype=linkingWidgetWAR&amp;uniq=188&amp;locationId=4221141&amp;lang=en_IN&amp;border=true&amp;display_version=2"></script>
+            </div>
+            <div class="clear"></div>
+
+            <div class="tripadvisor2">
+                <div id="TA_cdsratingsonlynarrow191" class="TA_cdsratingsonlynarrow"><img src="https://p.travelsmarter.net/api/usersync/seed.gif?api_key=gqLWKHSnTxes4YmmtgWkqA&amp;loc_id=4221141&amp;publisher_browser_id=214c7b81faf231f08ce989ed5a51dd0acd21204a&amp;cb=1559146484539&amp;part=true" alt="" width="0" height="0"><img src="https://p.travelsmarter.net/api/usersync/end.gif?api_key=gqLWKHSnTxes4YmmtgWkqA&amp;loc_id=4221141&amp;publisher_browser_id=214c7b81faf231f08ce989ed5a51dd0acd21204a&amp;cb=1559146484539&amp;term=1" alt="" width="0" height="0"><img src="https://p.travelsmarter.net/api/usersync/end.gif?api_key=gqLWKHSnTxes4YmmtgWkqA&amp;loc_id=4221141&amp;publisher_browser_id=214c7b81faf231f08ce989ed5a51dd0acd21204a&amp;cb=1559146484539&amp;term=2" alt="" width="0" height="0"> <div id="CDSRATINGWIDGET191" class="cdsROW gray   border   narrow "> <div id="CDSROWCONTAINER191" class="cdsROWContainer"> <div id="CDSROWLOC191" class="cdsComponent cdsLocName"> <a href="http://www.tripadvisor.in/Attraction_Review-g304551-d4221141-Reviews-DLF_Promenade_Mall-New_Delhi_National_Capital_Territory_of_Delhi.html" target="_blank" onclick="ta.cds.handleTALink(18034, this); return true;" rel="nofollow"> DLF Promenade Mall </a> </div> <div id="CDSROWRATING191" class="cdsComponent cdsRating"> <span class="ui_bubble_rating bubble_45"></span> <br> <span> 331 Reviews </span> </div> <div id="CDSROWLOGO191" class="cdsComponent logo"> <a target="_blank" href="https://www.tripadvisor.in/" rel="nofollow"><img src="https://www.tripadvisor.in/img/cdsi/img2/branding/tripadvisor_logo_transp_340x80-18034-2.png" alt="TripAdvisor"></a> </div> </div> </div>  </div>
+                <script src="http://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=191&amp;locationId=4221141&amp;lang=en_IN&amp;border=true&amp;shadow=false&amp;backgroundColor=gray&amp;display_version=2"></script>
+            </div>
+
+            <div class="tripadvisor2">
+
+                <div id="TA_certificateOfExcellence279" class="TA_certificateOfExcellence"><img src="https://p.travelsmarter.net/api/usersync/seed.gif?api_key=gqLWKHSnTxes4YmmtgWkqA&amp;loc_id=4221141&amp;publisher_browser_id=214c7b81faf231f08ce989ed5a51dd0acd21204a&amp;cb=1559146484818&amp;part=true" alt="" width="0" height="0"><img src="https://p.travelsmarter.net/api/usersync/end.gif?api_key=gqLWKHSnTxes4YmmtgWkqA&amp;loc_id=4221141&amp;publisher_browser_id=214c7b81faf231f08ce989ed5a51dd0acd21204a&amp;cb=1559146484818&amp;term=1" alt="" width="0" height="0"><img src="https://p.travelsmarter.net/api/usersync/end.gif?api_key=gqLWKHSnTxes4YmmtgWkqA&amp;loc_id=4221141&amp;publisher_browser_id=214c7b81faf231f08ce989ed5a51dd0acd21204a&amp;cb=1559146484818&amp;term=2" alt="" width="0" height="0"> <div id="CDSWIDCOE" class="widCOE"> <div class="widCOETitle"> Certificate of Excellence </div> <div class="widCOEDate"> <span class="widCOEDateText">2018</span> </div> <div class="widCOELogo"> <a target="_blank" href="https://www.tripadvisor.in/Attraction_Review-g304551-d4221141-Reviews-DLF_Promenade_Mall-New_Delhi_National_Capital_Territory_of_Delhi.html"><img src="https://www.tripadvisor.in/img/cdsi/img2/awards/CoE2017_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"></a> </div> </div><!--/ #CDSWIDCOE--> </div>
+                <script async="" src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&amp;uniq=279&amp;locationId=4221141&amp;lang=en_IN&amp;year=2018&amp;display_version=2"></script>
+
+            </div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="getintouch">
+            <h1>Get In Touch</h1>
+            <ul>
+                <li><a href="https://www.facebook.com/dlfpromenade?fref=ts" rel="nofollow" target="_blank" class="facebook1"></a></li>
+                <li><a href="https://twitter.com/PromenadeDLF" rel="nofollow" target="_blank" class="twitter1"></a></li>
+                <li><a href="https://in.pinterest.com/dlfpromenade/" rel="nofollow" target="_blank" class="pintrest1"></a></li>
+                <li><a href="https://instagram.com/dlfpromenade/" rel="nofollow" target="_blank" class="instgram1"></a></li>
+                <div class="tripadvsrlike">
+                    <div id="TA_socialButtonReviews448" class="TA_socialButtonReviews"><img src="https://p.travelsmarter.net/api/usersync/seed.gif?api_key=gqLWKHSnTxes4YmmtgWkqA&amp;loc_id=4221141&amp;publisher_browser_id=214c7b81faf231f08ce989ed5a51dd0acd21204a&amp;cb=1559146484815&amp;part=true" alt="" width="0" height="0"><img src="https://p.travelsmarter.net/api/usersync/end.gif?api_key=gqLWKHSnTxes4YmmtgWkqA&amp;loc_id=4221141&amp;publisher_browser_id=214c7b81faf231f08ce989ed5a51dd0acd21204a&amp;cb=1559146484815&amp;term=1" alt="" width="0" height="0"><img src="https://p.travelsmarter.net/api/usersync/end.gif?api_key=gqLWKHSnTxes4YmmtgWkqA&amp;loc_id=4221141&amp;publisher_browser_id=214c7b81faf231f08ce989ed5a51dd0acd21204a&amp;cb=1559146484815&amp;term=2" alt="" width="0" height="0"> <div class="socialWidgetContainer"> <div class="socialWidget"> <a href="https://www.tripadvisor.in/Attraction_Review-g304551-d4221141-Reviews-DLF_Promenade_Mall-New_Delhi_National_Capital_Territory_of_Delhi.html" target="_blank" rel="nofollow"> <div class="socialWidgetCore" title="See 331 reviews on TripAdvisor"> <img src="https://www.tripadvisor.in/img/cdsi/img2/branding/socialWidget/20x28_green-21692-2.png" align="middle"> </div> <div class="socialWidgetCallout"> <div class="grayArrowLeft"></div> <div class="borderBox"> <div class="reviewCount"> 331 </div> </div> </div> </a> </div> </div> </div>
+                    <script src="http://www.jscache.com/wejs?wtype=socialButtonReviews&amp;uniq=448&amp;locationId=4221141&amp;color=green&amp;size=rect&amp;lang=en_IN&amp;display_version=2"></script>
+                </div>
+            </ul>
+            <div class="clear"></div>
+
+
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable = no" name="viewport">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!--------Supersized Start Here----------->
+<script type="text/javascript" src="http://www.dlfpromenade.com/js/supersized/jquery.easing.min.js"></script>
+<script type="text/javascript" src="http://www.dlfpromenade.com/js/supersized/supersized.3.2.7.min.js"></script>
+<script type="text/javascript" src="http://www.dlfpromenade.com/js/supersized/supersized.shutter.min.js"></script>
+<!--------Supersized End Here----------->
+
+<link rel="stylesheet" href="http://www.dlfpromenade.com/js/treeview/jquery.treeview.css">
+<script src="http://www.dlfpromenade.com/js/treeview/jquery.treeview.js" type="text/javascript"></script>
+<script src="http://www.dlfpromenade.com/js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+		$('.accordionContent:first').hide();
+	/*$('.accordionButton:first').addClass('on');*/
+	$('.accordionButton').click(function() {
+		$('.accordionButton').removeClass('on');
+	 	$('.accordionContent').slideUp('normal');
+		if($(this).next().is(':hidden') == true) {
+			$(this).addClass('on');
+			$(this).next().slideDown('normal');
+		 }
+	 });
+
+	$("#browser").treeview({
+		collapsed: true
+	});
+
+	$(".close-map").click(function(){
+	$(".map-active").fadeOut("fast");
+	});
+
+	$('.btnmenu').click(function(event) {
+		$("body").addClass("mmenu").stop().animate({left: "-70%"});
+		$(".mobileright").stop().animate({right: "0%"});
+		$("#mobilemenu").css({position: "absolute"});
+		event.stopPropagation();
+	});
+
+	$("html").click(function() {
+		//$('#mobilemenu').fadeOut(500);
+		$("body").stop().animate({left: "0%"}, function(){
+			$("body").removeClass("mmenu")
+		});
+		$(".mobileright").stop().animate({right: "-70%"});
+		$("#mobilemenu").css({position: "fixed"});
+	});
+
+	$(".topnav li").hover(function(){
+		$(this).find(".menupopup").stop(true).fadeIn("slow");
+		$(this).find(".menupopupdine").stop(true).fadeIn("slow");
+		$(this).find(".menupopupenter").stop(true).fadeIn("slow");
+		$(".scroll").niceScroll().resize();
+		$(".scrolldine").niceScroll().resize();
+		$(this).find("a").addClass("activemenu");
+	}, function(){
+		$(this).find(".menupopup").stop(true).fadeOut("slow");
+		$(this).find(".menupopupdine").stop(true).fadeOut("slow");
+		$(this).find(".menupopupenter").stop(true).fadeOut("slow");
+		$(this).find("a").removeClass("activemenu");
+	});
+
+	$(".leftlinks li a").hover(function(){
+		$(".mlogos").hide();
+
+		$(".leftlinks li a").removeClass("activesubmenu");
+		$(this).addClass("activesubmenu");
+		gethref = $(this).attr("href");
+		$(gethref).stop(true, true).fadeIn(500);
+	}, function(){
+
+	});
+	$(".leftlinksdine li a").hover(function(){
+		$(".mlogosdine").hide();
+
+		$(".leftlinksdine li a").removeClass("activesubmenu");
+		$(this).addClass("activesubmenu");
+		gethref = $(this).attr("href");
+		$(gethref).stop(true, true).fadeIn(500);
+	}, function(){
+
+	});
+
+	$('html, body').stop(true).delay(600).animate({ scrollTop:640 }, 700);
+	function resizeBehave() {
+		var windowWidth = $(document).width();
+		var windowHeight = $(document).height();
+
+	};
+
+});
+</script>
+
+
+
+<script type="text/javascript" src="js/supersized/bg-inner.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".custom-select").change(function(){
+		var selectedOption = $(this).find(":selected").text();
+		$(this).next(".holder").text(selectedOption);
+	}).trigger('change');
+});
+</script>
+
+
+</body></html>

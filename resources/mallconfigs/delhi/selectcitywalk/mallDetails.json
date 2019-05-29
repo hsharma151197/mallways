@@ -1,0 +1,10 @@
+{
+  "_id": "",
+  "name": "selectcitywalk",
+  "displayName": "Select City Walk",
+  "city": "Delhi",
+  "location": "Saket, Delhi",
+  "mall_cover_image": "https://www.dfordelhi.in/wp-content/uploads/2018/03/Select-CITYWALK-2.jpg",
+  "resourcePath": "malls/delhi/selectcitywalk/",
+  "categories": []
+}

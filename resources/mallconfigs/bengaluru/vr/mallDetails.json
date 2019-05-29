@@ -1,0 +1,13 @@
+{
+  "_id": "vr_bengaluru",
+  "name": "vr",
+  "displayName": "VR Mall",
+  "mall_cover_image": "",
+  "city": {
+    "id": "bengaluru",
+    "name": "Bengaluru"
+  },
+  "location": "Whitefield Main Road",
+  "resourcePath": "malls/bengaluru/vr",
+  "categories": []
+}

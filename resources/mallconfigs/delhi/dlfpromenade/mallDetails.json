@@ -1,0 +1,13 @@
+{
+  "_id": "dlfpromenade_delhi",
+  "name": "dlfpromenade",
+  "displayName": "DLF Promenade",
+  "mall_cover_image": "",
+  "city": {
+    "id": "delhi",
+    "name": "Delhi"
+  },
+  "location": "Nelson Mandela Road",
+  "resourcePath": "malls/delhi/dlfpromenade",
+  "categories": []
+}

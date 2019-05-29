@@ -1,0 +1,85 @@
+[
+  {
+    "categoryName": "Clothing",
+    "_id": "clothing",
+    "enabled": true,
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Apparel&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Sportswear&brand=default"
+    ]
+  },
+  {
+    "categoryName": "Restaurants",
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=dine&place=ggn&brand=default"
+    ],
+    "_id": "restaurants",
+    "enabled": true
+  },
+  {
+    "categoryName": "Footwear",
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Footwear&brand=default"
+    ],
+    "_id": "footwear",
+    "enabled": true
+  },
+  {
+    "categoryName": "Electronics",
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Electronics&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Mobile+Accessories&brand=default"
+    ],
+    "_id": "electronics",
+    "enabled": true
+  },
+  {
+    "categoryName": "BodyCare, Spa, Salon",
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Beauty+products&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Cosmetics%2C+Make-+Up%2C+Body-+Car&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Eyecare+and+Eyewear&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Golf+Accessories&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Spa+%26+Salon&brand=default"
+    ],
+    "_id": "bodycare",
+    "enabled": true
+  },
+  {
+    "categoryName": "Homecare",
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Lifestyle+Products+%26+home+good&brand=default"
+    ],
+    "_id": "homecare",
+    "enabled": true
+  },
+  {
+    "categoryName": "Entertainment",
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=entertainment&place=ggn&categor=default&brand=default"
+    ],
+    "_id": "entertainment",
+    "enabled": true
+  },
+  {
+    "categoryName": "Others",
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Accessories+&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Bags%2C+Jewellery+%26+Accessories&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Bags%2C+Perfumes+%26+Accessories+&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Gifts%2C+Toys+and+Books&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Jewellery+&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=ggn&categor=Luggage+Bags+&brand=default"
+    ],
+    "_id": "others",
+    "enabled": true
+  }
+]

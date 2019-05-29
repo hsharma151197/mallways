@@ -1,0 +1,668 @@
+<html><head><script async="" src="https://query.yahooapis.com/v1/public/yql?format=json&amp;rnd=20191220&amp;diagnostics=true&amp;callback=jQuery112409896452159124582_1550587346057&amp;q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text=%22Bengaluru,%20KA%22)%20and%20u=%22c%22&amp;_=1550587346058"></script>
+  <meta charset="utf-8">
+  <title>Shopping in Bangalore | Best Shopping Places in Bangalore</title>
+  <meta name="description" content="VR Bengaluru offering the best price shopping in Bangalore. It is the best shopping places in Bangalore where anybody can make fun and shop anything.">
+  <meta name="keywords" content="shopping in Bangalore, shopping places in bangalore, places to visit in Bangalore, shopping mall in Bangalore">
+  <meta charset="utf-8">
+  <link rel="canonical" href="https://www.vrbengaluru.com/shopping-places-in-bangalore.asp">
+  <meta name="page-topic" content="Shopping in Bangalore">
+  <meta name="copyright" content="VR Bengaluru">
+  <meta name="author" content="VR Bengaluru">
+  <meta name="robots" content="index, follow">
+  <meta name="rating" content="safe for kids">
+  <meta name="googlebot" content=" index, follow ">
+  <meta name="bingbot" content=" index, follow ">
+  <meta name="reply-to" content="vrb_helpdesk@virtuousretail.com">
+  <meta name="allow-search" content="yes">
+  <meta name="revisit-after" content="daily">
+  <meta name="distribution" content="global">
+  <meta name="expires" content="never">
+  <meta http-equiv="content-language" content="english">
+  <link rel="shortcut icon" href="favicon.ico">
+
+
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable = no" name="viewport">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsiv.css">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <script src="https://connect.facebook.net/signals/config/1005991242789974?v=2.8.41&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/comman.js"></script>
+  <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/owl.theme.css">
+  <link rel="stylesheet" href="css/owl.transitions.css">
+  <script type="text/javascript" src="js/owl.carousel.js"></script>
+  <script type="text/javascript" src="js/jquery.cookie.js"></script>
+
+  <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+
+  <script type="text/javascript" src="js/jquery.simpleWeather.js"></script>
+
+  <script src="js/viewer.js"></script>
+  <script src="js/main-new.js"></script>
+  <link rel="stylesheet" href="css/viewer.css">
+
+
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-74785327-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1005991242789974'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+                 src="https://www.facebook.com/tr?id=1005991242789974&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- DO NOT MODIFY -->
+  <!-- End Facebook Pixel Code -->
+
+  <!--script>
+
+  $(function(){
+
+  //$('html').find('').replaceWith('Center');
+
+  var foo = $('body').html();
+
+  foo = foo.replace('center', 'Center');
+
+  $('body').html(foo);
+
+
+  });
+  </script-->
+  <script language="javascript" src="js/functionAjax.js"></script>
+
+  <script type="text/javascript">
+    function forStoreChange()
+    {
+      var newStore = document.getElementById("txtbyName").value;
+      if (newStore != '') {
+        newStore = newStore.replace("&amp;","ampercent");
+        //alert(newStore);
+        getStoreFltByName(newStore);
+      }
+    }
+  </script>
+  <script language="javascript">
+    function AutoCompleteDB()
+    {
+      // set the initial values.
+      this.bEnd = false;
+      this.nCount = 0;
+      this.aStr = new Object;
+    }
+    AutoCompleteDB.prototype.add = function(str)
+    {
+      // increment the count value.
+      this.nCount++;
+      // if at the end of the string, flag this node as an end point.
+      if ( str == "" )
+        this.bEnd = true;
+      else
+      {
+        // otherwise, pull the first letter off the string
+        var letter = str.substring(0,1);
+        var rest = str.substring(1,str.length);
+
+        // and either create a child node for it or reuse an old one.
+        if ( !this.aStr[letter] ) this.aStr[letter] = new AutoCompleteDB();
+        this.aStr[letter].add(rest);
+      }
+    }
+    AutoCompleteDB.prototype.getCount = function(str, bExact)
+    {
+      // if end of search string, return number
+      if ( str == "" )
+        if ( this.bEnd && bExact && (this.nCount == 1) ) return 0;
+        else return this.nCount;
+
+      // otherwise, pull the first letter off the string
+      var letter = str.substring(0,1);
+      var rest = str.substring(1,str.length);
+
+      // and look for case-insensitive matches
+      var nCount = 0;
+      var lLetter = letter.toLowerCase();
+      if ( this.aStr[lLetter] )
+        nCount += this.aStr[lLetter].getCount(rest, bExact && (letter == lLetter));
+
+      var uLetter = letter.toUpperCase();
+      if ( this.aStr[uLetter] )
+        nCount += this.aStr[uLetter].getCount(rest, bExact && (letter == uLetter));
+
+      return nCount;
+    }
+    AutoCompleteDB.prototype.getStrings = function(str1, str2, outStr)
+    {
+      if ( str1 == "" )
+      {
+        // add matching strings to the array
+        if ( this.bEnd )
+          outStr.push(str2);
+        // get strings for each child node
+        for ( var i in this.aStr )
+          this.aStr[i].getStrings(str1, str2 + i, outStr);
+      }
+      else
+      {
+        // pull the first letter off the string
+        var letter = str1.substring(0,1);
+        var rest = str1.substring(1,str1.length);
+
+        // and get the case-insensitive matches.
+        var lLetter = letter.toLowerCase();
+        if ( this.aStr[lLetter] )
+          this.aStr[lLetter].getStrings(rest, str2 + lLetter, outStr);
+        var uLetter = letter.toUpperCase();
+        if ( this.aStr[uLetter] )
+          this.aStr[uLetter].getStrings(rest, str2 + uLetter, outStr);
+      }
+    }
+
+    function AutoComplete(aStr, oText, oDiv, nMaxSize)
+    {
+      // initialize member variables
+      this.oText = oText;
+      this.oDiv = oDiv;
+      this.nMaxSize = nMaxSize;
+
+      // preprocess the texts for fast access
+      this.db = new AutoCompleteDB();
+      var i, n = aStr.length;
+      for ( i = 0; i < n; i++ )
+      {
+        this.db.add(aStr[i]);
+      }
+
+      // attach handlers to the text-box
+      oText.AutoComplete = this;
+      oText.onkeyup = AutoComplete.prototype.onTextChange;
+      oText.onblur = AutoComplete.prototype.onTextBlur;
+    }
+    AutoComplete.prototype.onTextBlur = function()
+    {
+      this.AutoComplete.onblur();
+    }
+    AutoComplete.prototype.onblur = function()
+    {
+      this.oDiv.style.visibility = "hidden";
+    }
+    AutoComplete.prototype.onTextChange = function()
+    {
+      this.AutoComplete.onchange();
+    }
+    AutoComplete.prototype.onDivMouseDown = function()
+    {
+      this.AutoComplete.oText.value = this.innerHTML;
+    }
+    AutoComplete.prototype.onDivMouseOver = function()
+    {
+      this.className = "AutoCompleteHighlight";
+    }
+    AutoComplete.prototype.onDivMouseOut = function()
+    {
+      this.className = "AutoCompleteBackground";
+    }
+    AutoComplete.prototype.onchange = function()
+    {
+      var txt = this.oText.value;
+
+      // count the number of strings that match the text-box value
+      var nCount = this.db.getCount(txt, true);
+
+      // if a suitable number then show the popup-div
+      if ( (this.nMaxSize == -1 ) || ((nCount < this.nMaxSize) && (nCount > 0)) )
+      {
+        // clear the popup-div.
+        while ( this.oDiv.hasChildNodes() )
+          this.oDiv.removeChild(this.oDiv.firstChild);
+
+        // get all the matching strings from the AutoCompleteDB
+        var aStr = new Array();
+        this.db.getStrings(txt, "", aStr);
+
+        // add each string to the popup-div
+        //ALTER BY NIRANJAN SINHA
+        if (txt == parseInt(txt))
+          var i, n = 1;
+        else
+        // END ALTER
+          var i, n = aStr.length;
+        for ( i = 0; i < n; i++ )
+        {
+          var oDiv = document.createElement('div');
+          this.oDiv.appendChild(oDiv);
+          oDiv.innerHTML = aStr[i];
+          oDiv.onmousedown = AutoComplete.prototype.onDivMouseDown;
+          oDiv.onmouseover = AutoComplete.prototype.onDivMouseOver;
+          oDiv.onmouseout = AutoComplete.prototype.onDivMouseOut;
+          oDiv.AutoComplete = this;
+        }
+        this.oDiv.style.visibility = "visible";
+      }
+      else // hide the popup-div
+      {
+        this.oDiv.innerHTML = "";
+        this.oDiv.style.visibility = "hidden";
+      }
+    }
+    function createAutoComplete()
+    {
+      var aNames =
+        [
+          "Adidas", "All Things Sundar", "Amante", "Be Desi By Neeru's", "Bounce Salon & Spa", "Cadini", "Colorbar Cosmetics", "Craftsvilla", "Crossword", "D:fy", "Dune London", "Dyson", "Faye Kids", "Foodhall", "Forever 21", "Forever New", "Funcity", "G-shock", "Go Colours", "H & M", "Hamleys", "Health & Glow", "Hidesign", "Hunkemoller", "Hush Puppies", "Iconic", "Iplanet", "Iplanet Care", "Kama Ayurveda", "Levi's", "Madhuloka", "Magic Garden", "Marks & Spencer", "Max", "Mobikins", "Mothercare", "Muji", "Nykaa Luxe", "One Plus", "People", "Pepe Jeans Jr", "Project Eve", "Puma", "Pvr Cinemas", "Rare Rabbit", "Raymond", "Silver Shines", "Skechers", "Souchii", "Sunglass Hut", "Super99", "Superdry", "The Fitness Club", "The Nail Couture", "The Spa Thing", "W Store", "Whitefield Central", "Wildcraft", "Wonderchef", "Woods"
+        ];
+      new AutoComplete(
+        aNames,
+        document.getElementById('txtbyName'),
+        document.getElementById('theDiv'),
+        25
+      );
+    }
+  </script></head>
+
+
+
+<body class="static" onload="createAutoComplete();">
+
+<header>
+  <div class="top_menu">
+    <div class="home_wrapper">
+      <div class="top_menu_left">
+
+        <script>
+          $(document).ready(function() {
+            $.simpleWeather({
+              location: 'Bengaluru, KA',
+              woeid: '',
+              //unit: 'f', //fahrenheit
+              unit: 'c', // celsius
+              success: function(weather) {
+                html = '<i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'';
+                //html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+                //html += '<li class="currently">'+weather.currently+'</li>';
+                //html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
+
+                $("#weather").html(html);
+              },
+              error: function(error) {
+                // $("#weather").html('<p>'+error+'</p>');
+              }
+            });
+          });
+        </script>
+
+        <p><a href="javascript:;"><span id="weather"></span>  <img src="images/weather.png">OPEN TODAY FROM 10AM TO 10PM</a></p>
+      </div>
+
+      <div class="top_menu_right">
+        <ul>
+          <li><a href="places-to-visit-in-bangalore.asp">About Us</a></li>
+          <li><a href="business.asp">Business</a></li>
+          <li><a href="http://www.virtuousretail.com/" rel="nofollow" target="_blank">Investors</a></li>
+          <li><a href="location.asp">Reach Us</a></li>
+          <li><a href="gallery.asp">Gallery </a></li>
+          <li><a href="awards.asp">Newsroom </a></li>
+          <li><a href="careers.asp"> Careers </a></li>
+        </ul>
+        <section class="social">
+          <a href="https://www.facebook.com/VRBengaluru/" rel="nofollow" target="_blank"><img src="images/Facebook.png"></a>
+          <a href="https://twitter.com/vrbengaluru?lang=en" rel="nofollow" target="_blank"><img src="images/Twitter.png"></a>
+          <a href="https://www.instagram.com/vrbengaluru/" rel="nofollow" target="_blank"><img src="images/Instagram.png"></a>
+          <a href="https://www.youtube.com/channel/UCRR2AN0gGyg3EjPU4LmBX9w" rel="nofollow" target="_blank"><img src="images/YouTube.svg" style="margin-top: 14px; width: 26px"></a>
+        </section>
+        <div class="clr"></div>
+      </div>
+      <!--end top_menu_right-->
+      <div class="clr"></div>
+
+    </div>
+    <!--end home_wrapper-->
+  </div>
+  <!--end top_menu-->
+  <div class="bottom_menu">
+    <div class="home_wrapper">
+      <div class="logo"><a href="index.asp"><img src="https://www.vrbengaluru.com/images/vrb_logo.png"></a></div>
+      <!--end logo-->
+      <div class="main_navigation">
+        <ul>
+          <li class="retail current"><a href="shopping-places-in-bangalore.asp">Shop<span class="menu1"></span></a></li>
+          <li><a href="food-court-in-bangalore.asp">Dine<span class="menu2"></span></a></li>
+          <li><a href="hotels-in-whitefield-bangalore.asp">Stay<span class="menu3"></span></a></li>
+          <li><a href="office-space-for-rent-in-bangalore.asp">Work<span class="menu4"></span></a></li>
+          <li><a href="kids-entertainment-in-bangalore.asp">Play<span class="menu4"></span></a></li>
+          <li><a href="events-in-bangalore.asp">Events<span class="menu5"></span></a></li>
+          <li><a href="offers.asp">Offers<span class="menu6"></span></a></li>
+          <!--li><a href="javascript:;">Live<span class="menu6"></span></a></li-->
+          <!--li><a href="attractions.asp">Attractions<span class="menu9"></span></a></li-->
+          <li><a href="VRDifference.asp">The VR Difference <span class="menu9"></span></a></li>
+
+          <ul>
+          </ul></ul></div>
+      <!--main_navigation-->
+    </div>
+    <!--home_wrapper-->
+  </div>
+  <!--end bottom_menu-->
+
+  <div class="mobile_trigger"><img src="images/trigger.png"></div>
+
+  <div class="mobile_menu">
+    <div class="mobile_menu_over"></div>
+    <div class="mobile_menu_inner">
+      <div class="mobile_logo"><a href="index.asp"><img src="https://www.vrbengaluru.com/images/vrb_logo.png" alt="" title=""></a></div>
+      <ul>
+        <li><a href="index.asp">Home</a></li>
+        <li><a href="places-to-visit-in-bangalore.asp">About Us</a></li>
+        <li class="retail"><a href="shopping-places-in-bangalore.asp">Shop<span class="menu1"></span></a></li>
+        <li><a href="food-court-in-bangalore.asp">Dine<span class="menu2"></span></a></li>
+        <li><a href="hotels-in-whitefield-bangalore.asp">Stay<span class="menu3"></span></a></li>
+        <li><a href="office-space-for-rent-in-bangalore.asp">Work<span class="menu4"></span></a></li>
+        <li><a href="kids-entertainment-in-bangalore.asp">Play<span class="menu4"></span></a></li>
+        <li><a href="events-in-bangalore.asp">Events<span class="menu5"></span></a></li>
+        <li><a href="offers.asp">Offers<span class="menu6"></span></a></li>
+        <li><a href="VRDifference.asp">The VR Difference <span class="menu9"></span></a></li>
+        <li><a href="gallery.asp">Gallery </a></li>
+        <li><a href="location.asp">Reach Us</a></li>
+        <li><a href="awards.asp">Newsroom </a></li>
+        <li><a href="business.asp">Business</a></li>
+        <li><a href="http://www.virtuousretail.com/" rel="nofollow" target="_blank">Investors</a></li>
+        <li><a href="careers.asp"> Careers </a></li>
+      </ul>
+    </div>
+    <!--end mobile_menu_inner-->
+  </div>
+</header>
+<!--end header-->
+<div class="clr"></div>
+
+<div class="home_wrapper">
+  <div class="main_section_heading main_section_heading_inner"><h1>Shop</h1></div>
+
+  <div class="inner_ftr">
+    <div id="searchbar" class="srch">
+      <input type="text" name="txtbyName" id="txtbyName" placeholder="Store Name" onchange="forStoreChange(this.value)" autocomplete="off">
+      <a href="javascript:;"><span></span></a>
+      <span id="theDiv" class="seg" style="cursor:pointer;"></span>
+    </div>
+
+    <div class="srch_option">
+      <select onchange="JavaScript:getStoreFltByZone('',1,this.value)">
+        <option value="" selected="">Choose Category [ ALL ]</option>
+
+        <option value="14">Accessories</option>
+
+        <option value="30">Apparel &amp; Fashion - Kids</option>
+
+        <option value="36">Apparel &amp; Fashion - Men</option>
+
+        <option value="41">Apparel &amp; Fashion - Unisex</option>
+
+        <option value="34">Apparel &amp; Fashion - Women</option>
+
+        <option value="15">Books and Stationary</option>
+
+        <option value="26">Departmental Store</option>
+
+        <option value="38">Eyewear</option>
+
+        <option value="16">Family Entertainment Centre</option>
+
+        <option value="17">Fitness Center</option>
+
+        <option value="10">Footwear</option>
+
+        <option value="33">Footwear &amp; Accessories</option>
+
+        <option value="21">Health and Beauty</option>
+
+        <option value="35">Home</option>
+
+        <option value="43">Home Accessories</option>
+
+        <option value="11">Jewellery &amp; Watches</option>
+
+        <option value="40">Kids Play Area</option>
+
+        <option value="24">Mobile &amp; Electronics</option>
+
+        <option value="20">Multiplex</option>
+
+        <option value="29">Salon &amp; Spa</option>
+
+        <option value="48">Service Centre</option>
+
+        <option value="47">Spa</option>
+
+        <option value="37">Sports &amp; Fitness</option>
+
+        <option value="39">Supermarket</option>
+
+        <option value="42">Toys</option>
+
+        <option value="19">Wine &amp; Beer</option>
+
+      </select></div>
+    <div class="clr"></div>
+  </div>
+  <div class="clr"></div>
+  <div id="sByAlphaBetDiv">
+
+    <div class="alfa_filter">
+      <ul class="simplefilter">
+        <li><span class="deactive">A</span></li><li><span class="deactive">B</span></li><li><span class="deactive">C</span></li><li><span class="deactive">D</span></li><li><span class="deactive">E</span></li><li><span class="deactive">F</span></li><li><span class="deactive">G</span></li><li><a href="JavaScript:;" onclick="JavaScript:getStoreFltByAlfBByZone(&quot;H&quot;,'1','42','')">H</a></li><li><span class="deactive">I</span></li><li><span class="deactive">J</span></li><li><span class="deactive">K</span></li><li><span class="deactive">L</span></li><li><span class="deactive">M</span></li><li><span class="deactive">N</span></li><li><span class="deactive">O</span></li><li><span class="deactive">P</span></li><li><span class="deactive">Q</span></li><li><span class="deactive">R</span></li><li><span class="deactive">S</span></li><li><span class="deactive">T</span></li><li><span class="deactive">U</span></li><li><span class="deactive">V</span></li><li><span class="deactive">W</span></li><li><span class="deactive">X</span></li><li><span class="deactive">Y</span></li><li style="border:none;"><span class="deactive">Z</span></li><li><a href="JavaScript:;" onclick="JavaScript:getStoreFltByAlfBByZone('ALL','1','42','')">All</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="home_wrapper">
+  <div id="detailsScroller">
+
+    <div class="inner_container_events">
+
+      <div class="main_filter_item filtr-container">
+        <div class="flor_left">
+          <div class="sl_heading_levl"><h1>Select Floor</h1></div>
+
+          <div class="sl_level"><a href="JavaScript:getStoreFltByZone(6,1,'');"><img src="images/floor1h.png">
+            <span>Ground Floor</span>
+          </a></div>
+
+
+          <div class="sl_level"><a href="JavaScript:getStoreFltByZone(7,1,'');"><img src="images/upperground_floor.png">
+            <span>Upper Ground Floor</span>
+          </a></div>
+
+
+          <div class="sl_level"><a href="JavaScript:getStoreFltByZone(1,1,'');"><img src="images/first_floor.png">
+            <span>First Floor</span>
+          </a></div>
+
+          <div class="sl_level"><a href="JavaScript:getStoreFltByZone(2,1,'');"><img src="images/second_floor.png">
+            <span>Second Floor</span>
+          </a>
+          </div>
+
+          <div class="sl_level"><a href="JavaScript:getStoreFltByZone(3,1,'');"><img src="images/third_floor.png">
+            <span>Third Floor</span></a>
+          </div>
+
+
+        </div>
+        <!--end flor_left-->
+        <div class="flor_right">
+
+          <div id="storeDiv" class="event_inner">
+            <div id="divLoader"></div>
+
+
+            <div class="event1">
+              <div class="event1_inner">
+                <a href="shop-details.asp?id=65">
+				<span class="event_image width_auto">
+					<!--<img src="Resize_Image.aspx?ImgWd=150&ImgHt=104&IptFl=images/stores/hamley-logo.gif" alt="Hamleys" title="Hamleys" />-->
+					<img src="images/stores/hamley-logo.gif" width="150" height="104" alt="Hamleys" title="Hamleys">
+
+				</span>
+                  <span class="ev_details">
+
+					<span class="evt_t">Hamleys</span>
+					<div class="clr"></div>
+				</span>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="clr"></div>
+
+          </div>
+
+        </div>
+        <!--end flor_left-->
+
+        <div class="clr"></div>
+
+
+      </div>
+      <!--end inner_containerr-->
+
+
+      <div class="clr"></div>
+
+
+    </div>
+    <!--end scroll-wrapper-->
+  </div>
+  <!--end inner_container-->
+
+</div>
+
+
+<div class="footer_top_linked" style="background:#ececec"><p style="font-size: 14px; color: #5e5e5e; line-height: 20px; margin-bottom: 12px; padding:15px 40px; text-align: center;"><strong>Disclaimer:</strong> Photos &amp; certain artwork used on www.vrbengaluru.com are copyright protected and are the property of their respective owners. Brand logos &amp; other trademarks used herein are the property of their respective owners.</p></div>
+<div class="footer_top_linked"><a href="join-mall-insider.asp">Become a VR Bengaluru insider today CLICK HERE.</a></div>
+<footer>
+  <div class="home_wrapper">
+    <div class="top_footer_left">
+      <div class="top_footer1">
+        <div class="footer_logo"><img src="images/f-logo.png"></div>
+        <div class="footer_social">
+          <ul>
+            <li><a href="https://www.facebook.com/VRBengaluru/ " rel="nofollow" target="_blank" class="fb1"></a></li>
+            <li><a href="https://twitter.com/vrbengaluru?lang=en " rel="nofollow" target="_blank" class="fb2"></a></li>
+            <li><a href="https://www.instagram.com/vrbengaluru/ " rel="nofollow" target="_blank" class="fb3"></a></li>
+            <li><a href="https://www.youtube.com/channel/UCRR2AN0gGyg3EjPU4LmBX9w" target="_blank" class="fb4"></a></li>
+            <!--li><a href="javascript:;" class="fb4"></a></li-->
+          </ul>
+        </div>
+      </div>
+      <div class="top_footer01">
+        <div class="footer_logo_right">
+          <!--<p>The Black Box on Whitefield Road, <br/>Bengaluru, India.<br/>-->
+          <p>VR Bengaluru, Whitefield Main Road, <br>Mahadevpura, Bengaluru - 560048<br>
+            Tel: <!-- +91 80 46524111-->+91 80 46693469</p>
+          <p class="padding_bottom0">Email: <a href="mailto:vrb_helpdesk@virtuousretail.com">vrb_helpdesk@virtuousretail.com</a></p>
+
+        </div>
+      </div>
+      <div class="clr"></div>
+
+    </div>
+    <!--end top_footer-->
+    <div class="top_footer_right">
+      <div class="top_footer_inner_right">
+        <ul>
+          <li><a href="places-to-visit-in-bangalore.asp">About Us</a></li>
+          <li><a href="location.asp">Reach Us</a></li>
+          <li><a href="gallery.asp">Gallery </a></li>
+          <li><a href="awards.asp">Newsroom </a></li>
+          <li><a href="careers.asp"> Careers </a></li>
+
+        </ul>
+      </div>
+      <div class="top_footer_inner_right">
+        <ul>
+          <li><a href="shopping-places-in-bangalore.asp">Shop</a></li>
+          <li><a href="food-court-in-bangalore.asp">Dine</a></li>
+          <li><a href="hotels-in-whitefield-bangalore.asp">Stay</a></li>
+          <li><a href="office-space-for-rent-in-bangalore.asp">Work</a></li>
+          <li><a href="business.asp">Business</a></li>
+
+        </ul>
+      </div>
+
+      <div class="top_footer_inner_right">
+        <ul>
+
+          <li><a href="events-in-bangalore.asp">Events</a></li>
+          <li><a href="offers.asp">Offers</a></li>
+          <!--li><a href="javascript:;">Live</a></li-->
+          <!--li><a href="attractions.asp">Attractions</a></li-->
+          <li><a href="VRDifference.asp">The VR Difference </a></li>
+          <li><a href="http://www.virtuousretail.com/legal.asp " target="_blank"> Legal  </a></li>
+
+        </ul>
+      </div>
+
+      <!--div class="top_footer_inner_right top_footer_inner_right1">
+      <h4>Get Social</h4>
+      <p>Follow us us on Facebook and Twitter for your chance to earn savings!</p>
+      <p class="folow"><img src="images/folow.png"/></p>
+      </div-->
+      <div class="clr"></div>
+    </div>
+    <!--end top_footer-->
+    <div class="clr"></div>
+    <!--span class="op_hr_365_border">
+    <span class="op_hr_365_heading">Opening Hour:</span>
+    <span class="op_hr_365"><!--Concierge Desk: 10:00am - 9.30pm,
+    Retail: 10:00am - 9.30pm,
+    Food Box: 11:00am - 10:30pm,
+    Cinema: 9:00am - 10:30pm-->
+    <!--Concierge desk – 10 am to 10.30 pm,
+    Retail- 10 am to 10 pm,
+    Food Box – 10 am to 11 pm,
+    Cinema: 9:00am - 10:30pm
+    </span>
+    <div class="clr"></div>
+    </span-->
+
+    <div class="copy">
+      <div class="copy_left"><p>© Copyright 2016, all rights reserved with <span>VR Bengaluru</span></p></div>
+      <div class="copy_right"><p>Site by: <a href="http://www.csipl.net/" rel="nofollow" target="_blank">Cross Section</a></p></div>
+      <div class="clr"></div>
+    </div>
+
+  </div>
+  <!--end home_wrapper-->
+</footer>
+<!--end footer-->
+
+
+
+
+</body></html>

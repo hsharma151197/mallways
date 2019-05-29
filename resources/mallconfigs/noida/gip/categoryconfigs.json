@@ -1,0 +1,74 @@
+[
+  {
+    "categoryName": "Clothing",
+    "_id": "clothing",
+    "enabled": true,
+    "scrapeType": "url",
+    "resources": [
+      "https://www.thegreatindiaplace.in/shop-directory/"
+    ]
+  },
+  {
+    "categoryName": "Restaurants",
+    "scrapeType": "url",
+    "resources": [
+      "https://www.thegreatindiaplace.in/shop-directory/"
+    ],
+    "_id": "restaurants",
+    "enabled": true
+  },
+  {
+    "categoryName": "Footwear",
+    "scrapeType": "url",
+    "resources": [
+      "https://www.thegreatindiaplace.in/shop-directory/"
+    ],
+    "_id": "footwear",
+    "enabled": true
+  },
+  {
+    "categoryName": "Electronics",
+    "scrapeType": "url",
+    "resources": [
+      "https://www.thegreatindiaplace.in/shop-directory/"
+    ],
+    "_id": "electronics",
+    "enabled": true
+  },
+  {
+    "categoryName": "BodyCare, Spa & Salon",
+    "scrapeType": "url",
+    "resources": [
+      "https://www.thegreatindiaplace.in/shop-directory/"
+    ],
+    "_id": "bodycare",
+    "enabled": true
+  },
+  {
+    "categoryName": "Home & LifeStyle",
+    "scrapeType": "url",
+    "resources": [
+      "https://www.thegreatindiaplace.in/shop-directory/"
+    ],
+    "_id": "homecare",
+    "enabled": true
+  },
+  {
+    "categoryName": "Entertainment",
+    "scrapeType": "url",
+    "resources": [
+      "https://www.thegreatindiaplace.in/shop-directory/"
+    ],
+    "_id": "entertainment",
+    "enabled": true
+  },
+  {
+    "categoryName": "Others",
+    "scrapeType": "url",
+    "resources": [
+      "https://www.thegreatindiaplace.in/shop-directory/"
+    ],
+    "_id": "others",
+    "enabled": true
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "categoryName": "clothing",
+    "_id": "clothing",
+    "enabled": true,
+    "scrapeType": "file",
+    "resources": [
+      "apparels-ethnic.html",
+      "apparels_fashion.html",
+      "sportswear.html",
+      "lingerie.html"
+    ]
+  },
+  {
+    "categoryName": "Restaurants",
+    "scrapeType": "file",
+    "resources": [
+      "eat_food_lounge.html",
+      "eataries.html"
+    ],
+    "_id": "restaurants",
+    "enabled": true
+  },
+  {
+    "categoryName": "Footwear",
+    "scrapeType": "file",
+    "resources": [
+      "footwear.html"
+    ],
+    "_id": "footwear",
+    "enabled": true
+  },
+  {
+    "categoryName": "Electronics",
+    "scrapeType": "file",
+    "resources": [
+      "electronics.html"
+    ],
+    "_id": "electronics",
+    "enabled": true
+  },
+  {
+    "categoryName": "BodyCare, Spa, Salon",
+    "scrapeType": "file",
+    "resources": [
+      "beauty.html"
+    ],
+    "_id": "bodycare",
+    "enabled": true
+  },
+  {
+    "categoryName": "Homecare",
+    "scrapeType": "file",
+    "resources": [
+      "home.html"
+    ],
+    "_id": "homecare",
+    "enabled": true
+  },
+  {
+    "categoryName": "Entertainment",
+    "scrapeType": "file",
+    "resources": [
+      "services.html"
+    ],
+    "_id": "entertainment",
+    "enabled": true
+  },
+  {
+    "categoryName": "Others",
+    "scrapeType": "file",
+    "resources": [
+      "casual.html","books.html","eyewear.html","kids.html","special.html"
+    ],
+    "_id": "others",
+    "enabled": true
+  }
+]

@@ -1,0 +1,25 @@
+group 'in.mallways'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'scala'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven {
+        url 'http://central.maven.org/maven2/'
+    }
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.7'
+    compile "org.seleniumhq.selenium:selenium-chrome-driver:3.4.0"
+
+    compile group: 'net.liftweb', name: 'lift-json_2.11', version: '2.6.2'
+    compile group: 'com.github.pathikrit', name: 'better-files_2.11', version: '3.4.0'
+    compile group: 'com.typesafe.scala-logging', name: 'scala-logging_2.11', version: '3.9.0'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+}
+
+apply plugin: 'application'
+mainClassName = 'in.mallways.ScrapeApp'

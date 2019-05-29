@@ -1,0 +1,93 @@
+[
+  {
+    "categoryName": "Clothing",
+    "_id": "clothing",
+    "enabled": true,
+    "scrapeType": "file",
+    "resources": [
+      "apparel_kids.html",
+      "apparel_men.html",
+      "apparel_unisex.html",
+      "apparel_women.html",
+      "departmental.html",
+      "sports.html"
+    ]
+  },
+  {
+    "categoryName": "Restaurants",
+    "scrapeType": "url",
+    "resources": [
+      "https://www.vrbengaluru.com/food-court-in-bangalore.asp"
+    ],
+    "_id": "restaurants",
+    "enabled": true
+  },
+  {
+    "categoryName": "Footwear",
+    "scrapeType": "file",
+    "resources": [
+      "footwear.html",
+      "footwear_accessories.html"
+    ],
+    "_id": "footwear",
+    "enabled": true
+  },
+  {
+    "categoryName": "Electronics",
+    "scrapeType": "file",
+    "resources": [
+      "electronics.html",
+      "service_centres.html"
+    ],
+    "_id": "electronics",
+    "enabled": true
+  },
+  {
+    "categoryName": "BodyCare, Spa, Salon",
+    "scrapeType": "file",
+    "resources": [
+      "fitness.html",
+      "health_beauty.html",
+      "spa.html",
+      "spa_salon.html"
+    ],
+    "_id": "bodycare",
+    "enabled": true
+  },
+  {
+    "categoryName": "Homecare",
+    "scrapeType": "file",
+    "resources": [
+      "home.html",
+      "home_acc.html"
+    ],
+    "_id": "homecare",
+    "enabled": true
+  },
+  {
+    "categoryName": "Entertainment",
+    "scrapeType": "file",
+    "resources": [
+      "entertainment.html",
+      "kids_playarea.html",
+      "multiplex.html"
+    ],
+    "_id": "entertainment",
+    "enabled": true
+  },
+  {
+    "categoryName": "Others",
+    "scrapeType": "file",
+    "resources": [
+      "hidesign_accessories.html",
+      "books.html",
+      "eyewear.html",
+      "jewellery_watches.html",
+      "supermarkets.html",
+      "toys.html",
+      "beer.html"
+    ],
+    "_id": "others",
+    "enabled": true
+  }
+]

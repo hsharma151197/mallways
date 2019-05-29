@@ -1,0 +1,84 @@
+[
+  {
+    "categoryName": "Clothing",
+    "_id": "clothing",
+    "enabled": true,
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Apparel&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Sportswear&brand=default"
+    ]
+  },
+  {
+    "categoryName": "Restaurants",
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=dine&place=vk&categor=default&brand=default"
+    ],
+    "_id": "restaurants",
+    "enabled": true
+  },
+  {
+    "categoryName": "Footwear",
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Footwear&brand=default"
+    ],
+    "_id": "footwear",
+    "enabled": true
+  },
+  {
+    "categoryName": "Electronics",
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Electronics&brand=default"
+    ],
+    "_id": "electronics",
+    "enabled": true
+  },
+  {
+    "categoryName": "BodyCare, Spa, Salon",
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Beauty+products&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Eyecare+and+Eyewear&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Spa+%26+Salon&brand=default"
+    ],
+    "_id": "bodycare",
+    "enabled": true
+  },
+  {
+    "categoryName": "Homecare",
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Home+D%C3%83%C2%A9cor+and+Furniture&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Home+D%C3%A9cor+and+Furniture&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Lifestyle+Products+%26+home+good&brand=default"
+    ],
+    "_id": "homecare",
+    "enabled": true
+  },
+  {
+    "categoryName": "Entertainment",
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=entertainment&place=vk&categor=default&brand=default"
+    ],
+    "_id": "entertainment",
+    "enabled": true
+  },
+  {
+    "categoryName": "Others",
+    "scrapeType": "url",
+    "resources": [
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Accessories+&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Bags%2C+Jewellery+%26+Accessories&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Gifts%2C+Toys+and+Books&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Jewellery+&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Super+Market&brand=default",
+      "http://www.ambiencemalls.com/dashboard.php?main_cat=shop&place=vk&categor=Watches&brand=default"
+    ],
+    "_id": "others",
+    "enabled": true
+  }
+]

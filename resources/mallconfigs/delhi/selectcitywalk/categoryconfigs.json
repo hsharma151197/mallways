@@ -1,0 +1,83 @@
+[
+  {
+    "categoryName": "Clothing",
+    "_id": "clothing",
+    "enabled": true,
+    "scrapeType": "file",
+    "resources": [
+      "clothing-apparel.html",
+      "clothing-apparel-intl-brands.html",
+      "clothing-ethnic_wear.html",
+      "clothing-sports.html",
+      "clothing-kids.html",
+      "clothing-lingerie.html"
+    ]
+  },
+  {
+    "categoryName": "Restaurants",
+    "scrapeType": "file",
+    "resources": [
+      "restaurants.html"
+    ],
+    "_id": "restaurants",
+    "enabled": true
+  },
+  {
+    "categoryName": "Footwear & Bags",
+    "scrapeType": "file",
+    "resources": [
+      "footwear-footwear_bags.html"
+    ],
+    "_id": "footwear",
+    "enabled": true
+  },
+  {
+    "categoryName": "Electronics",
+    "scrapeType": "file",
+    "resources": [
+      "electronics.html"
+    ],
+    "_id": "electronics",
+    "enabled": true
+  },
+  {
+    "categoryName": "Beauty,Cosmetics,Spa,Saloon",
+    "scrapeType": "file",
+    "resources": [
+      "bodycare-beauty_skincare.html",
+      "bodycare-health.html"
+    ],
+    "_id": "bodycare",
+    "enabled": true
+  },
+  {
+    "categoryName": "Homecare",
+    "scrapeType": "file",
+    "resources": [
+      "homelifestyle.html"
+    ],
+    "_id": "homecare",
+    "enabled": true
+  },
+  {
+    "categoryName": "Entertainment",
+    "scrapeType": "file",
+    "resources": [
+      "entertainment-movies.html",
+      "entertainment-gaming.html"
+    ],
+    "_id": "entertainment",
+    "enabled": true
+  },
+  {
+    "categoryName": "Others",
+    "scrapeType": "file",
+    "resources": [
+      "others-books.html",
+      "others-services.html",
+      "others-jewellery.html"
+    ],
+    "_id": "others",
+    "enabled": true
+  }
+]

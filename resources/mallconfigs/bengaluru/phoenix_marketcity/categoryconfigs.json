@@ -1,0 +1,74 @@
+[
+  {
+    "categoryName": "Clothing",
+    "_id": "clothing",
+    "enabled": true,
+    "scrapeType": "file",
+    "resources": [
+      "clothing.html"
+    ]
+  },
+  {
+    "categoryName": "Restaurants",
+    "scrapeType": "file",
+    "resources": [
+      "restaurants.html"
+    ],
+    "_id": "restaurants",
+    "enabled": true
+  },
+  {
+    "categoryName": "Footwear",
+    "scrapeType": "file",
+    "resources": [
+      "footwear.html"
+    ],
+    "_id": "footwear",
+    "enabled": true
+  },
+  {
+    "categoryName": "Electronics",
+    "scrapeType": "file",
+    "resources": [
+      "electronics.html"
+    ],
+    "_id": "electronics",
+    "enabled": true
+  },
+  {
+    "categoryName": "BodyCare, Spa, Salon",
+    "scrapeType": "file",
+    "resources": [
+      "bodycare.html"
+    ],
+    "_id": "bodycare",
+    "enabled": true
+  },
+  {
+    "categoryName": "Homecare",
+    "scrapeType": "file",
+    "resources": [
+      "homecare.html"
+    ],
+    "_id": "homecare",
+    "enabled": true
+  },
+  {
+    "categoryName": "Entertainment",
+    "scrapeType": "file",
+    "resources": [
+      "entertainment.html"
+    ],
+    "_id": "entertainment",
+    "enabled": true
+  },
+  {
+    "categoryName": "Others",
+    "scrapeType": "file",
+    "resources": [
+      "others.html"
+    ],
+    "_id": "others",
+    "enabled": true
+  }
+]

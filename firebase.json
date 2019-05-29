@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "data/firebase_host_root",
+    "target": "mallways-assets",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
